@@ -19,7 +19,7 @@ func main() {
 
 	bot, err := linebot.New(os.Getenv("ChannelSecret"), os.Getenv("ChannelAccessToken"))
 	if err != nil {
-		log.Fatal("failed to new line	 ", err)
+		log.Fatal("failed to new line bot", err)
 	}
 
 	router := gin.New()
