@@ -121,7 +121,7 @@ func getStationTimeTableRequest(station string, destination string) (*http.Reque
 
 func getNowTime() time.Time {
 	location, _ := time.LoadLocation("Asia/Taipei")
-	return time.Now().In(location).Add(time.Hour * 8)
+	return time.Now().In(location)
 }
 
 func isValidTimeTable(timeTable StationTimeTable) bool {
