@@ -107,7 +107,7 @@ func handleTextMessage(text string) string {
 		}
 
 		return strings.Join(result, "\n")
+	default:
+		return "りしれ供さ小"
 	}
-
-	return ""
 }
