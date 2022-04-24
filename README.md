@@ -1,6 +1,6 @@
 # Line Bot MRT
 
-This project is a line bot that helps you to retrive the information from [MOTC Transport API](https://ptx.transportdata.tw/MOTC/?urls.primaryName=%E8%BB%8C%E9%81%93V2#/Metro/MetroApi_Frequency_2100). As it is in the early stage of develepment, this project only support the time table function.
+This project is a line bot that helps you to retrive the information from [MOTC Transport API](https://ptx.transportdata.tw/MOTC/?urls.primaryName=%E8%BB%8C%E9%81%93V2#/Metro/MetroApi_Frequency_2100). As it is in the early stage of develepment, this project only support the timetable function.
 
 I have deployed this project on Heroku, if you want to have a look, you can join this official account via the following link.
 
@@ -8,14 +8,18 @@ I have deployed this project on Heroku, if you want to have a look, you can join
 
 ## Motivation
 
-Recently, Taipei MRT company kept promote their new app `台北捷運go`. However, I found the app is full ADs and not even available for checking the time table!
+Recently, Taipei MRT company kept promote their new app `台北捷運go`. However, I found the app is full ADs and not even available for checking the timetable!
 
-As a result, I decided to find a more convenient way to get the time table information. I found [MOTC Transport API](https://ptx.transportdata.tw/MOTC/?urls.primaryName=%E8%BB%8C%E9%81%93V2#/Metro/MetroApi_Frequency_2100) and decided to combine with line bot.
+As a result, I decided to find a more convenient way to get the timetable information. I found [MOTC Transport API](https://ptx.transportdata.tw/MOTC/?urls.primaryName=%E8%BB%8C%E9%81%93V2#/Metro/MetroApi_Frequency_2100) and decided to combine with line bot.
 
-I choose line bot because Line app supports Shortcut App on my iphone, so I can write a routine to automatically check the time table before I go to work.
+I choose line bot because Line app supports Shortcut App on my iphone, so I can write a routine to automatically check the timetable before I go to work.
 
 ## Usage
-To retrieve the time table of Taipei MRT, type
+An example screen shot:
+
+![](https://i.imgur.com/sO1J1nd.jpg)
+
+To retrieve the timetable of Taipei MRT, type
 ```
 時刻表 出發站 終點站 數量
 ```
@@ -25,6 +29,7 @@ For example, send `時刻表 景美 松山 3` will response with
 21:52
 22:01
 ```
+which is the arrival times of the upcoming three timetables.
 
 If the message does not start with a valid query command, it will response with `りしれ供さ小`
 
@@ -58,6 +63,6 @@ For example, `go test -v ./mrt` will do the test I wrote in `mrt` package.
 ## Future Work
 - Add support for suggesting station name. Like `Did you mean: xxx` in Google search.
 - Save data in DB to reduce the time for querying MOTC API.
-- Add support for checking national holidays, as the time table would be different for national holidays.
+- Add support for checking national holidays, as the timetable would be different for national holidays.
 - Add routing check, so that user can input any destination, and the program should check how to travel to the destination.
 - Add other operations, e.g. real-time information of MRT from MOTC API.
