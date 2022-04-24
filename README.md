@@ -1,12 +1,17 @@
 # Line Bot MRT
 
 This project is a line bot that helps you to retrive the information from [MOTC Transport API](https://ptx.transportdata.tw/MOTC/?urls.primaryName=%E8%BB%8C%E9%81%93V2#/Metro/MetroApi_Frequency_2100). As it is in the early stage of develepment, this project only support the time table function.
+
 I have deployed this project on Heroku, if you want to have a look, you can join this official account via the following link.
+
 ![](https://i.imgur.com/awb3Jfq.png)
 
 ## Motivation
+
 Recently, Taipei MRT company kept promote their new app `台北捷運go`. However, I found the app is full ADs and not even available for checking the time table!
+
 As a result, I decided to find a more convenient way to get the time table information. I found [MOTC Transport API](https://ptx.transportdata.tw/MOTC/?urls.primaryName=%E8%BB%8C%E9%81%93V2#/Metro/MetroApi_Frequency_2100) and decided to combine with line bot.
+
 I choose line bot because Line app supports Shortcut App on my iphone, so I can write a routine to automatically check the time table before I go to work.
 
 ## Usage
